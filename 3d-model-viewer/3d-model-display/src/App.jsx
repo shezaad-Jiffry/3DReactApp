@@ -1,21 +1,20 @@
 import React from 'react'
-import styles from './style'
-import { Navbar } from './components'
-import { FaBeer } from 'react-icons/fa';
-const App = () =>(
-    <div class="bg-gradient-to-r from-rose-300 via-rose-500 to-pink-700">
-      <div className={`${styles.paddingX}${styles.flexcenter}`}>
-        <div >
-          <Navbar/>
-          
-        </div>
-      </div>
-      <div className={`${styles.paddingX}`}>
-        <div className={`${styles.boxWidth}`}>
-        </div>
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import ModelViewer from './components/ModelViewer'
+import Home from './pages/Home'
 
-      </div>
-    </div>
-  )
+function App() {
+    return (
+        <>
+            {/* This is the alias of BrowserRouter i.e. Router */}
+            <Router>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/#Model" element={<ModelViewer />} />
+                </Routes>
+            </Router>
+        </>
+    )
+}
 
 export default App
