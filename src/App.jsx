@@ -9,7 +9,7 @@ function App() {
             <Router>
                 <Routes>
                     <Route path="/" element={<Home />} />
-                    <Route path="/viewport" element={<ViewPort/>} />
+                    <Route path="/viewport" element={<ViewPort />} />
                 </Routes>
             </Router>
         </>

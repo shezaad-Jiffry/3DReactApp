@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from '../style'
 import { Navbar, Hero, Footer } from '../components/index'
-import { Link } from 'react-router-dom'
 const Home = () => (
     <div className="bg-black-gradient w-full overflow-hidden">
         <div className={`${styles.paddingX} ${styles.flexCenter}`}>
@@ -15,9 +14,7 @@ const Home = () => (
             </div>
         </div>
         <div className={`${styles.flexStart}`}></div>
-        <div
-            className={`${styles.paddingX} ${styles.flexCenter}`}
-        >
+        <div className={`${styles.paddingX} ${styles.flexCenter}`}>
             <div className={`${styles.boxWidth}`}>
                 <Footer />
             </div>

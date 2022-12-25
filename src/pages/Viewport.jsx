@@ -16,9 +16,7 @@ const ViewPort = () => (
             </div>
         </div>
         <div className={`${styles.flexStart}`}></div>
-        <div
-            className={`${styles.paddingX} ${styles.flexCenter}`}
-        >
+        <div className={`${styles.paddingX} ${styles.flexCenter}`}>
             <div className={`${styles.boxWidth}`}>
                 <Footer />
             </div>
