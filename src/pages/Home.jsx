@@ -25,7 +25,7 @@ const Home = () => (
         <ul>
             <li>
                 {/* Endpoint to route to Home component */}
-                <Link to="/"/>
+                <Link to="/" />
             </li>
         </ul>
     </div>

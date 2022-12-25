@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from '../style'
-import { Navbar, Footer,ModelViewer } from '../components/index'
+import { Navbar, Footer, ModelViewer } from '../components/index'
 import { Link } from 'react-router-dom'
 import ModelViewer from '../components/ModelViewer'
 const ViewPort = () => (
@@ -26,7 +26,7 @@ const ViewPort = () => (
         <ul>
             <li>
                 {/* Endpoint to route to Home component */}
-                <Link to="/"/>
+                <Link to="/" />
             </li>
         </ul>
     </div>
