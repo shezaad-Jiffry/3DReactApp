@@ -1,6 +1,5 @@
 import React from 'react'
 import styles from '../style'
-import { GiOverdrive } from 'react-icons/gi'
 import Contact from './Contact'
 const Footer = () => {
     return (
@@ -10,7 +9,7 @@ const Footer = () => {
             <div className="text-pink-500 font-poppins font-normal text-[50px]">
                 <div className="flex-[1] items-center">
                     <div className="text-pink-900">
-                        <Contact />
+                        <Contact/>
                     </div>
                 </div>
             </div>

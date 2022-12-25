@@ -9,26 +9,19 @@ const Home = () => (
                 <Navbar />
             </div>
         </div>
-        <div className={`bg-black-gradient ${styles.flexStart}`}>
-            <div className={`${styles.boxWidth}`}>
+        <div className={` ${styles.flexStart}`}>
+            <div className={`${styles.boxWidth} py-4 h-screen`}>
                 <Hero />
             </div>
         </div>
         <div className={`${styles.flexStart}`}></div>
         <div
-            className={`bg-black-gradient ${styles.paddingX} ${styles.flexCenter}`}
+            className={`${styles.paddingX} ${styles.flexCenter}`}
         >
             <div className={`${styles.boxWidth}`}>
                 <Footer />
             </div>
         </div>
-        <ul>
-            <li>
-                {/* Endpoint to route to Home component */}
-                <Link to="/" />
-            </li>
-        </ul>
     </div>
 )
-
 export default Home

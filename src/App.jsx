@@ -1,16 +1,15 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import ModelViewer from './components/ModelViewer'
 import Home from './pages/Home'
+import ViewPort from './pages/Viewport'
 
 function App() {
     return (
         <>
-            {/* This is the alias of BrowserRouter i.e. Router */}
             <Router>
                 <Routes>
                     <Route path="/" element={<Home />} />
-                    <Route path="/#Model" element={<ModelViewer />} />
+                    <Route path="/viewport" element={<ViewPort/>} />
                 </Routes>
             </Router>
         </>
