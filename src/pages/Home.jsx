@@ -9,7 +9,7 @@ const Home = () => (
             </div>
         </div>
         <div className={` ${styles.flexStart}`}>
-            <div className={`${styles.boxWidth} py-4 h-screen`}>
+            <div className={`${styles.boxWidth} py-4 `}>
                 <Hero />
             </div>
         </div>

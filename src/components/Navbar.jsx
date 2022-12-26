@@ -64,13 +64,13 @@ const Navbar = () => {
                                 className={`font-poppins font-normal curser-pointer text-[16px] text-white 
                         ${index === navLinks.length - 1 ? 'mr-0' : 'mb-4'}`}
                             >
-                                <a
-                                    href={`${
-                                        index === navLinks.length - 1
-                                            ? nav.id
-                                            : `#${nav.id}`
-                                    }`}
-                                >
+                         <a
+                            href={`${
+                                index === navLinks.length - 2
+                                    ? `#${nav.id}`
+                                    : nav.id
+                            }`}
+                        >
                                     {nav.title}
                                 </a>
                             </li>
