@@ -20,10 +20,8 @@ function Model(props) {
             onClick={(event) => click(!clicked)}
             onPointerOver={(event) => hover(true)}
             onPointerOut={(event) => hover(false)}
-            
-            
         >
-            <Seamstress/>
+            <Seamstress />
             <meshStandardMaterial color={hovered ? 'hotpink' : 'orange'} />
         </mesh>
     )
@@ -33,8 +31,8 @@ const ModelViewer = () => {
     return (
         <Canvas>
             <ambientLight intensity={0.6} />
-            <Model position = {[0,0,0]}/>
-            <OrbitControls/>
+            <Model position={[0, 0, 0]} />
+            <OrbitControls />
         </Canvas>
     )
 }

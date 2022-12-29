@@ -6,7 +6,6 @@ const Hero = () => {
         <section
             id="home"
             className={`flex md:flex-row flex-col ${styles.paddingY}  mx-14`}
-            
         >
             <div
                 className={`flex-1 ${styles.flexStart} xl:px-0 sm:padding-16  px-6 bg-gray-gradient rounded-[30px]`}
@@ -21,19 +20,19 @@ const Hero = () => {
                             >
                                 {id.text}
                             </li>
-                            
                         ))}
-                        <div className='bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 
-                        rounded-[30px] outline hover:outline-dashed cursor-pointer'>
-                            <a href='/viewport' className=' text-white mx-24 my-4'>
-                            View models here!
+                        <div
+                            className="bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 
+                        rounded-[30px] outline hover:outline-dashed cursor-pointer"
+                        >
+                            <a
+                                href="/viewport"
+                                className=" text-white mx-24 my-4"
+                            >
+                                View models here!
                             </a>
                         </div>
-
-
-
                     </ul>
-
                 </div>
             </div>
         </section>
