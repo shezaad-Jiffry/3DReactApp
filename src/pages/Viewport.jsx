@@ -2,17 +2,22 @@ import React from 'react'
 import styles from '../style'
 import { Navbar, Footer, ModelViewer, Hero } from '../components/index'
 import { Link } from 'react-router-dom'
+import Gui from '../components/GUI'
 
 const ViewPort = () => (
+    
     <div className="bg-black-gradient w-full overflow-hidden">
         <div className={`${styles.paddingX} ${styles.flexCenter}`}>
             <div className={`${styles.boxWidth}`}>
                 <Navbar />
+                
             </div>
         </div>
-        <div className={` ${styles.flexStart}`}>
-            <div className={`${styles.boxWidth} py-4 h-screen`}>
+        <div className={`${styles.flexStart} px-5 `}>
+            <div className={`border-8 border-pink-500  bg-gradient-to-r from-rose-400 h-screen w-screen`}>
                 <ModelViewer />
+                
+               
             </div>
         </div>
         <div className={`${styles.flexStart}`}></div>

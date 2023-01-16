@@ -2,6 +2,9 @@ import { useRef, useState } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import { Seamstress } from './Seamstress'
+import { Mari} from './Mari'
+import { Environment } from '@react-three/drei'
+import {Gui} from './GUI'
 
 //function passed into main thats exported
 function Model(props) {
@@ -21,7 +24,8 @@ function Model(props) {
             onPointerOver={(event) => hover(true)}
             onPointerOut={(event) => hover(false)}
         >
-            <Seamstress />
+            
+            <Mari />
             <meshStandardMaterial color={hovered ? 'hotpink' : 'orange'} />
         </mesh>
     )
@@ -29,11 +33,14 @@ function Model(props) {
 
 const ModelViewer = () => {
     return (
-        <Canvas>
-            <ambientLight intensity={0.6} />
-            <Model position={[0, 0, 0]} />
-            <OrbitControls />
-        </Canvas>
+        <div>
+            <Gui />
+            <Canvas>
+                <ambientLight intensity={0.6} />
+
+                <OrbitControls />
+            </Canvas>
+        </div>
     )
 }
 export default ModelViewer
