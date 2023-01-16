@@ -7,14 +7,14 @@ import { Environment } from '@react-three/drei'
 import {Gui} from './GUI'
 
 //function passed into main thats exported
-function Model(props) {
+function Model(props, animLength) {
     // This reference gives us direct access to the THREE.Mesh object
     const ref = useRef()
     // Hold state for hovered and clicked events
     const [hovered, hover] = useState(false)
     const [clicked, click] = useState(false)
-
     // Return the view, these are regular Threejs elements expressed in JSX
+    console.log(props)
     return (
         <mesh
             {...props}
@@ -33,11 +33,11 @@ function Model(props) {
 
 const ModelViewer = () => {
     return (
-        <div>
-            <Gui />
+        <div className='h-screen'>
+            <Gui/>
             <Canvas>
                 <ambientLight intensity={0.6} />
-
+                <Model/>
                 <OrbitControls />
             </Canvas>
         </div>
