@@ -7,29 +7,57 @@ import React, { useRef } from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
 
 export function Mari(props) {
-  const group = useRef()
-  const { nodes, materials, animations } = useGLTF('/mari-transformed.glb')
-  const { actions } = useAnimations(animations, group) 
-  return (
-    <mesh onClick={(e) => actions.dashmari.play()} >
-    <group ref={group} {...props} dispose={null}>
-      <group name="Scene">
-        <group name="mari_gamerig">
-          <primitive object={nodes['DEF-spine']} />
-          
-          
-          <skinnedMesh name="Hood" geometry={nodes.Hood.geometry} material={materials.CAPE} skeleton={nodes.Hood.skeleton} />
-          <skinnedMesh name="Main" geometry={nodes.Main.geometry} material={materials.MAIN} skeleton={nodes.Main.skeleton} />
-          <skinnedMesh name="Eyes" geometry={nodes.Eyes.geometry} material={materials.EYES} skeleton={nodes.Eyes.skeleton} morphTargetDictionary={nodes.Eyes.morphTargetDictionary} morphTargetInfluences={nodes.Eyes.morphTargetInfluences} />
-          <skinnedMesh name="Head" geometry={nodes.Head.geometry} material={materials.FACE} skeleton={nodes.Head.skeleton} morphTargetDictionary={nodes.Head.morphTargetDictionary} morphTargetInfluences={nodes.Head.morphTargetInfluences} />
-        </group>
-        
-      </group>
-      
-    </group>
-    </mesh>
-  )
-  
+    const group = useRef()
+    const { nodes, materials, animations } = useGLTF('/mari-transformed.glb')
+    const { actions } = useAnimations(animations, group)
+    return (
+        <mesh onClick={(e) => actions.dashmari.play()}>
+            <group ref={group} {...props} dispose={null}>
+                <group name="Scene">
+                    <group name="mari_gamerig">
+                        <primitive object={nodes['DEF-spine']} />
+
+                        <skinnedMesh
+                            name="Hood"
+                            geometry={nodes.Hood.geometry}
+                            material={materials.CAPE}
+                            skeleton={nodes.Hood.skeleton}
+                        />
+                        <skinnedMesh
+                            name="Main"
+                            geometry={nodes.Main.geometry}
+                            material={materials.MAIN}
+                            skeleton={nodes.Main.skeleton}
+                        />
+                        <skinnedMesh
+                            name="Eyes"
+                            geometry={nodes.Eyes.geometry}
+                            material={materials.EYES}
+                            skeleton={nodes.Eyes.skeleton}
+                            morphTargetDictionary={
+                                nodes.Eyes.morphTargetDictionary
+                            }
+                            morphTargetInfluences={
+                                nodes.Eyes.morphTargetInfluences
+                            }
+                        />
+                        <skinnedMesh
+                            name="Head"
+                            geometry={nodes.Head.geometry}
+                            material={materials.FACE}
+                            skeleton={nodes.Head.skeleton}
+                            morphTargetDictionary={
+                                nodes.Head.morphTargetDictionary
+                            }
+                            morphTargetInfluences={
+                                nodes.Head.morphTargetInfluences
+                            }
+                        />
+                    </group>
+                </group>
+            </group>
+        </mesh>
+    )
 }
 
 useGLTF.preload('/mari-transformed.glb')

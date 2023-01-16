@@ -5,19 +5,18 @@ import { Link } from 'react-router-dom'
 import Gui from '../components/GUI'
 
 const ViewPort = () => (
-    
     <div className="bg-black-gradient w-full overflow-hidden">
         <div className={`${styles.paddingX} ${styles.flexCenter}`}>
             <div className={`${styles.boxWidth}`}>
                 <Navbar />
-                
             </div>
         </div>
-        <div className={`${styles.flexStart} px-5 `}>
-            <div className={`border-8 border-pink-500  bg-gradient-to-r from-rose-400 h-screen w-screen`}>
+        <div className={`${styles.flexStart}  `}>
+            <Gui />
+            <div
+                className={`border-8 border-pink-500  bg-gradient-to-r from-rose-400 h-screen w-screen text-center`}
+            >
                 <ModelViewer />
-                
-               
             </div>
         </div>
         <div className={`${styles.flexStart}`}></div>

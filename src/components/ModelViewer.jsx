@@ -2,9 +2,9 @@ import { useRef, useState } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import { Seamstress } from './Seamstress'
-import { Mari} from './Mari'
+import { Mari } from './Mari'
 import { Environment } from '@react-three/drei'
-import {Gui} from './GUI'
+import { Gui } from './GUI'
 
 //function passed into main thats exported
 function Model(props, animLength) {
@@ -14,7 +14,7 @@ function Model(props, animLength) {
     const [hovered, hover] = useState(false)
     const [clicked, click] = useState(false)
     // Return the view, these are regular Threejs elements expressed in JSX
-    console.log(props)
+
     return (
         <mesh
             {...props}
@@ -24,7 +24,6 @@ function Model(props, animLength) {
             onPointerOver={(event) => hover(true)}
             onPointerOut={(event) => hover(false)}
         >
-            
             <Mari />
             <meshStandardMaterial color={hovered ? 'hotpink' : 'orange'} />
         </mesh>
@@ -33,11 +32,10 @@ function Model(props, animLength) {
 
 const ModelViewer = () => {
     return (
-        <div className='h-screen'>
-            <Gui/>
+        <div className="flex flex-wrap h-screen">
             <Canvas>
                 <ambientLight intensity={0.6} />
-                <Model/>
+                <Model />
                 <OrbitControls />
             </Canvas>
         </div>
