@@ -2,7 +2,7 @@ import React from 'react'
 import styles from '../style'
 export function Gui({ size }) {
     const length = size
-    var z = document.createElement('anim button') // is a node
+    var z = document.createElement('p') // is a node
 
     z.innerHTML = '<div className = py-4 onClick={showAlert}>Show alert</div>'
 
