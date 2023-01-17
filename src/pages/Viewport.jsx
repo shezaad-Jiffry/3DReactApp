@@ -6,11 +6,13 @@ import Gui from '../components/GUI'
 
 const ViewPort = () => (
     <div className="bg-black-gradient w-full overflow-hidden">
+        
         <div className={`${styles.paddingX} ${styles.flexCenter}`}>
             <div className={`${styles.boxWidth}`}>
                 <Navbar />
             </div>
         </div>
+
         <div className={`${styles.flexStart}  `}>
             <Gui />
             <div
@@ -19,12 +21,15 @@ const ViewPort = () => (
                 <ModelViewer />
             </div>
         </div>
+
         <div className={`${styles.flexStart}`}></div>
+
         <div className={`${styles.paddingX} ${styles.flexCenter}`}>
             <div className={`${styles.boxWidth}`}>
                 <Footer />
             </div>
         </div>
+
     </div>
 )
 export default ViewPort

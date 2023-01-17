@@ -5,16 +5,24 @@ Command: npx gltfjsx@6.1.3 mari.glb --transform
 
 import React, { useRef, useEffect } from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
+import { Carousel } from 'bootstrap'
+import utils from './utils'
 
 export function Mari(props) {
     const group = useRef()
     const { nodes, materials, animations } = useGLTF('/mari-transformed.glb')
 
     const { actions,mixer} = useAnimations(animations, group)
-    let anim1 = actions.dashmari
+    const clips = [actions.dashmari,actions.fallingmari,actions.idlemari,actions.runmari,actions.sprintmari,actions.stopmari,actions.tpose];
+        
+    utils(clips);
 
+    
+    
     return (
-        <mesh onClick={(e) => anim1.play()}>
+        
+        <mesh onClick={(e) => clips[1].play()}>
+            
             <group ref={group} {...props} dispose={null}>
                 <group name="Scene">
                     <group name="mari_gamerig">
@@ -59,6 +67,7 @@ export function Mari(props) {
                     </group>
                 </group>
             </group>
+            
         </mesh>
     )
 }
