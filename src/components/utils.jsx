@@ -1,6 +1,6 @@
 import { useGLTF, useAnimations } from '@react-three/drei'
 
-export function utils(clips,animNames) {
+export function utils(clips,animNames,mixer) {
   
     document.querySelectorAll('#animations').forEach(li => {
         li.remove();    
@@ -10,13 +10,15 @@ export function utils(clips,animNames) {
         
         li.innerHTML = animName;  
         li.id = 'animations'
-        li.addEventListener('click', testTheEventListener(clip));
+        console.log(clip)
+        li.addEventListener('click', function() {testTheEventListener(clip)}, true);
         document.getElementById('GUI').appendChild(li)
     }
     
     function testTheEventListener(clip) {
-        console.log(clip +"sepette")
+        
         if(clip!=null){
+            mixer.stopAllAction()
             clip.play()
         }
         

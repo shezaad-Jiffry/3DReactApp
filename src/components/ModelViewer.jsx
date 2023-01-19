@@ -2,12 +2,13 @@ import { useRef, useState } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import { Seamstress } from './Seamstress'
+import { Stella } from './Stella'
 import { Mari } from './Mari'
 import { Environment } from '@react-three/drei'
 import { Gui } from './GUI'
 
 //function passed into main thats exported
-function Model(props, animLength) {
+function Model(props,model) {
     // This reference gives us direct access to the THREE.Mesh object
     const ref = useRef()
     // Hold state for hovered and clicked events
@@ -24,7 +25,7 @@ function Model(props, animLength) {
             onPointerOver={(event) => hover(true)}
             onPointerOut={(event) => hover(false)}
         >
-            <Mari />
+            <Stella />
             <meshStandardMaterial color={hovered ? 'hotpink' : 'orange'} />
         </mesh>
     )
