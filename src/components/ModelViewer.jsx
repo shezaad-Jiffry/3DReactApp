@@ -25,7 +25,7 @@ function Model(props,model) {
             onPointerOver={(event) => hover(true)}
             onPointerOut={(event) => hover(false)}
         >
-            <Stella />
+            <Mari />
             <meshStandardMaterial color={hovered ? 'hotpink' : 'orange'} />
         </mesh>
     )

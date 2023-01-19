@@ -1,23 +1,30 @@
 {
     "name": "3d-model-display",
-    "private": true,
+    "private": false,
+    "homepage": "https://shezaad-Jiffry.github.io",
     "version": "0.0.0",
     "type": "module",
     "scripts": {
         "dev": "vite",
         "build": "vite build",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d dist",
         "preview": "vite preview"
+        
     },
     "dependencies": {
+        "-": "^0.0.1",
         "@react-icons/all-files": "^4.1.0",
         "@react-three/drei": "^9.48.1",
         "@react-three/fiber": "^8.9.1",
         "@types/three": "^0.146.0",
+        "gh-pages": "^4.0.0",
         "prettier": "^2.8.3",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "react-icons": "^4.7.1",
         "react-router-dom": "^6.6.1",
+        "save-dev": "^0.0.1-security",
         "three": "^0.148.0"
     },
     "devDependencies": {
