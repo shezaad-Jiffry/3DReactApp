@@ -1,18 +1,25 @@
-export function utils(clips) {
-    console.log(clips + "yeah");
-    document.querySelectorAll('li').forEach(li => {
+import { useGLTF, useAnimations } from '@react-three/drei'
+
+export function utils(clips,animNames) {
+  
+    document.querySelectorAll('#animations').forEach(li => {
         li.remove();    
     });
-    function addListItem() {
+    function addListItem(animName,clip) {
         let li = document.createElement('li');
         
-        li.innerHTML = "New element";  
-        li.addEventListener('click', testTheEventListener);
+        li.innerHTML = animName;  
+        li.id = 'animations'
+        li.addEventListener('click', testTheEventListener(clip));
         document.getElementById('GUI').appendChild(li)
     }
     
-    function testTheEventListener() {
-        console.log("The event listener works!");
+    function testTheEventListener(clip) {
+        console.log(clip +"sepette")
+        if(clip!=null){
+            clip.play()
+        }
+        
     }
     
     document.querySelectorAll('li').forEach(li => {
@@ -22,7 +29,10 @@ export function utils(clips) {
     });
 
     for (let i = 0; i< clips.length; i++){
-        addListItem();
+        let name = animNames[i]
+        let clip = clips[i]
+        
+        addListItem(name,clip);
     }
 }
 export default utils

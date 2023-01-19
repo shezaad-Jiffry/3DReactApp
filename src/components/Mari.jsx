@@ -14,14 +14,14 @@ export function Mari(props) {
 
     const { actions,mixer} = useAnimations(animations, group)
     const clips = [actions.dashmari,actions.fallingmari,actions.idlemari,actions.runmari,actions.sprintmari,actions.stopmari,actions.tpose];
-        
-    utils(clips);
-
+    const animNames = ['dash','fall','idle','run','sprint','run stop','neutral']
     
+    const clip = clips[1]
     
+    utils(clips,animNames);
     return (
         
-        <mesh onClick={(e) => clips[1].play()}>
+        <mesh onClick={(e) => mixer.stopAllAction()}>
             
             <group ref={group} {...props} dispose={null}>
                 <group name="Scene">
